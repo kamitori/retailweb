@@ -1,0 +1,92 @@
+<div class="panel panel-default">
+    <div class="panel-heading font-bold">
+        {{ form.title }}
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal form-validation" name="productForm" id="productForm" method="post" ng-if="form.allLoaded" novalidate>
+            <tabset>
+                <tab heading="Main">
+                    <div ng-repeat="data in form.fields">
+                        <render-form-elements data="data"></render-form-elements>
+                        <div class="line line-dashed b-b line-lg pull-in" ng-if="data.type != 'hidden'"></div>
+                    </div>
+                </tab>
+                <tab heading="Options">
+                    <div class="form-group">
+                    </div>
+                    <div class="form-group">
+                        <label for="options" class="col-sm-2 control-label"> Select Option: </label>
+                        <div class="col-sm-10">
+                            <select class="form-control" ng-model="form.selectedOption" ng-options="option.name for option in form.productOptions" style="width:30%; float:left;">
+                            </select>
+                            <button type="button" class="btn btn-default" ng-click="addOption()">Add</button>
+                        </div>
+                    </div>
+                    <div class="line line-dashed b-b line-lg pull-in"></div>
+                    <div class="form-group">
+                        <label for="options" class="col-sm-2 control-label"> Options</label>
+                        <div class="col-sm-10">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">SKU</th>
+                                            <th scope="col">Name</th>
+                                            <th scope="col">Type</th>
+                                            <th scope="col">Group</th>
+                                            <th scope="col">Req</th>
+                                            <th scope="col">S.P</th>
+                                            <th scope="col" class="text-right">Unit cost</th>
+                                            <th scope="col" class="text-right">Quantity</th>
+                                            <th scope="col" class="text-right">Total</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr ng-repeat="(index, option) in form.options" ng-if="!option.deleted">
+                                            <td>
+                                                <span class="glyphicon glyphicon-remove" style="cursor:pointer;" ng-click="removeOption({{ index }})">&nbsp;</span>
+                                                {{ option.sku }}
+                                            </td>
+                                            <td>{{ option.name }}</td>
+                                            <td>
+                                                <select class="form-control" ng-model="option.type">
+                                                    <option value="Inc">Inc</option>
+                                                    <option value="Exc">Exc</option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <input type="text" class="form-control" ng-model="option.group" />
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" ng-model="option.required" />
+                                            </td>
+                                            <td>
+                                                <input type="checkbox" ng-model="option.same_parent" />
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="Unit cost" ng-model="option.unit_price" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" class="form-control text-right" required >
+                                            </td>
+                                            <td>
+                                                <input type="text" placeholder="quantity" ng-model="option.quantity" ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01" class="form-control text-right" required >
+                                            </td>
+                                            <td class="text-right">
+                                                {{ (option.unit_price * option.quantity).toFixed(2) }}
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="line line-dashed b-b line-lg pull-in ng-scope"></div>
+                    </div>
+                </tab>
+            </tabset>
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <button type="reset" class="btn btn-default" ng-click="$state.reload();">Reset</button>
+                    <button type="submit" class="btn btn-primary" ng-click="save()" ng-disabled="productForm.$invalid">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

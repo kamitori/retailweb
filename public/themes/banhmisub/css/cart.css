@@ -1,0 +1,43 @@
+body{
+  
+}
+
+table tr td{
+  font-size: 1.8em;
+}
+
+.iscombo td, .iscombo h3{
+	font-size: 18px!important;
+}
+.bss-next,.bss-prev,.bss-fullscreen{
+	display: none;
+}
+.main-slides{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: white;
+}
+.option_list_se{
+	font-size: 14px;
+}
+.slide1{
+	min-height: 100px;
+	min-width: 100px;
+}
+.thank_you{
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: white;
+	font-size: 2.5em;
+	text-align: center;
+	padding-top: 20%;
+	z-index: 100;
+	width: 100%;
+	height: 100%;
+}
+.last_your_order_code{
+	font-size: 3.5em;
+	font-weight: bold;
+}

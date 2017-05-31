@@ -1,0 +1,82 @@
+@font-face{
+  font-family:'UnitedSans';
+  src:url('../../../fonts/UnitedSansSmCdBd.eot');
+  src:url('../../../fonts/UnitedSansSmCdBd.eot?') format('embedded-opentype'),url('../../../fonts/UnitedSansSmCdBd.woff') format('woff'),url('../../../font/UnitedSansSmCdBd.otf') format('openttype'),url('../../../fonts/UnitedSansSmCdBd.svg$UnitedSansRegular') format('svg');
+  font-weight:bold;font-style:normal;}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url('../../../fonts/sourcesanspro/sourcesanspro-bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../../../fonts/fontawesome-webfont.eot');
+  src: url('../../../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../../../fonts/fontawesome-webfont.woff') format('woff'), url('../../../fonts/fontawesome-webfont.ttf') format('truetype'), url('../../../fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: 'GothamUltraRegular';
+  src:url('../../../fonts/gotham_ultra-webfont.eot');
+  src:url('../../../fonts/gotham_ultra-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/gotham_ultra-webfont.woff') format('woff'),
+    url('../../../fonts/gotham_ultra-webfont.ttf') format('truetype'),
+    url('../../../fonts/gotham_ultra-webfont.svg#GothamUltraRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamBlackRegular';
+  src: url('../../../fonts/gotham_black-webfont.eot');
+  src: url('../../../fonts/gotham_black-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/gotham_black-webfont.woff') format('woff'),
+    url('../../../fonts/gotham_black-webfont.ttf') format('truetype'),
+    url('../../../fonts/gotham_black-webfont.svg#GothamBlackRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'GothamMediumRegular';
+  src: url('../../../fonts/gotham_medium-webfont.eot');
+  src: url('../../../fonts/gotham_medium-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/gotham_medium-webfont.woff') format('woff'),
+    url('../../../fonts/gotham_medium-webfont.ttf') format('truetype'),
+    url('../../../fonts/gotham_medium-webfont.svg#GothamMediumRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ArialNarrowBold';
+  src:url('../../../fonts/arial_narrow_bold-webfont.eot');
+  src:url('../../../fonts/arial_narrow_bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../../../fonts/arial_narrow_bold-webfont.woff') format('woff'),
+    url('../../../fonts/arial_narrow_bold-webfont.ttf') format('truetype'),
+    url('../../../fonts/arial_narrow_bold-webfont.svg#ArialNarrowBold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@font-face {
+    font-family: 'pzUltra';
+    src: url('../../../fonts/proximanova-xbold-webfont.eot');
+    src: url('../../../fonts/proximanova-xbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/proximanova-xbold-webfont.woff') format('woff'),
+         url('../../../fonts/proximanova-xbold-webfont.ttf') format('truetype'),
+         url('../../../fonts/proximanova-xbold-webfont#pzUltra') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'pzUltraReg';
+    src: url('../../../fonts/proximanova-reg-webfont.eot');
+    src: url('../../../fonts/proximanova-reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../fonts/proximanova-reg-webfont.woff') format('woff'),
+         url('../../../fonts/proximanova-reg-webfont.ttf') format('truetype'),
+         url('../../../fonts/proximanova-reg-webfont#pzUltraReg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}

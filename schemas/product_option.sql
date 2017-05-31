@@ -1,0 +1,38 @@
+﻿# SQL Manager 2007 for MySQL 4.4.1.2
+# ---------------------------------------
+# Host     : localhost
+# Port     : 3306
+# Database : retailweb
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+SET FOREIGN_KEY_CHECKS=0;
+
+#
+# Structure for the `product_option` table : 
+#
+
+DROP TABLE IF EXISTS `product_option`;
+
+CREATE TABLE `product_option` (
+  `id` INTEGER(11) NOT NULL AUTO_INCREMENT,
+  `product_id` INTEGER(11) NOT NULL,
+  `option_id` INTEGER(11) NOT NULL,
+  `weight` FLOAT(9,2) DEFAULT NULL,
+  `amount` FLOAT(9,2) DEFAULT NULL,
+  `custom_price` FLOAT(9,2) DEFAULT '0.00',
+  `total` FLOAT(9,2) DEFAULT '0.00',
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id` (`id`)
+)ENGINE=InnoDB
+AUTO_INCREMENT=26 CHARACTER SET 'utf8' COLLATE 'utf8_general_ci';
+
+
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

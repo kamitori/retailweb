@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+    <div class="panel-heading font-bold">
+        {{ form.title }}
+        <!-- <div class="pull-right top-right">
+            <button type="button" class="btn btn-default" onclick="$('button[type=\'reset\']').click()">Reset</button>
+            <button type="button" class="btn btn-primary" ng-disabled="configForm.$invalid" ng-click="save()">Save changes</button>
+        </div>   -->      
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal form-validation" name="productForm" method="post" ng-if="form.allLoaded" novalidate>
+            
+            <div ng-repeat="data in form.fields">
+                <render-form-elements data="data"></render-form-elements>
+                <div class="line line-dashed b-b line-lg pull-in" ng-if="data.type != 'hidden'"></div>
+            </div> 
+            <div class="ng-scope">     
+                <div class="form-group ng-scope">
+                    <label for="sold_by" class="col-sm-2  control-label"> Sold By: </label>
+                    <div class="col-sm-10">
+                        <select name="sold_by" id="sold_by" ng-model="form.sold_by" class="form-control" onchange="angular.element(this).scope().selectUnit(this.value)">
+                            <option value="">--Select--</option>
+                            <option ng-repeat="u in form.unit" ng-model="u.value">{{u.text}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in ng-scope"></div>
+            </div>
+            <div class="ng-scope"> 
+                <div class="form-group ng-scope">
+                    <label for="oum" class="col-sm-2  control-label"> OUM: </label>
+                    <div class="col-sm-10">
+                        <select name="oum" id="oum" ng-model="form.oum" class="form-control">
+                            <option value="">--Select--</option>
+                            <option ng-repeat="ud in form.unitdetail" ng-model="ud.value">{{ud.text}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="line line-dashed b-b line-lg pull-in ng-scope"></div>
+            </div>              
+			
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <button type="reset" class="btn btn-default" ng-click="$state.reload();">Reset</button>
+                    <button type="submit" class="btn btn-primary" ng-click="save()" ng-disabled="productForm.$invalid">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

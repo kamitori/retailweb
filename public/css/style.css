@@ -1,0 +1,46 @@
+
+.status-on {
+	color: green;
+	line-height: 2em;
+    text-align: center;	
+}
+.status-off {
+	color: red;
+	line-height: 2em;
+    text-align: center;	
+}
+.top-right {
+	margin-top: -8px;
+}
+
+.btn-bg-black:hover{
+	background-color: black;
+	color:white;
+}
+
+/*desktop*/
+
+@media screen and (min-width: 992px) {
+  
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+
+/*phone*/
+@media (max-width: 767px) {
+	.wrapper-md{
+		height: 65px;
+		position: fixed;
+    	background: white;
+    	z-index: 999;
+	}
+	.wrapper-md h1{
+		display: none;
+	}
+	.backend-action-bt{
+		margin-top: 0;
+	}
+}
+

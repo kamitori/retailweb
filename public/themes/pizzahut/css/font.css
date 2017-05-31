@@ -1,0 +1,18 @@
+@font-face{
+  font-family:'UnitedSans';
+  src:url('../../../fonts/UnitedSansSmCdBd.eot');
+  src:url('../../../fonts/UnitedSansSmCdBd.eot?') format('embedded-opentype'),url('../../../fonts/UnitedSansSmCdBd.woff') format('woff'),url('../../../font/UnitedSansSmCdBd.otf') format('openttype'),url('../../../fonts/UnitedSansSmCdBd.svg$UnitedSansRegular') format('svg');
+  font-weight:bold;font-style:normal;}
+@font-face {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Source Sans Pro Bold'), local('SourceSansPro-Bold'), url('../fonts/sourcesanspro/sourcesanspro-bold.woff') format('woff');
+}
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../../../fonts/fontawesome-webfont.eot');
+  src: url('../../../fonts/fontawesome-webfont.eot?#iefix&v=4.4.0') format('embedded-opentype'), url('../../../fonts/fontawesome-webfont.woff') format('woff'), url('../../../fonts/fontawesome-webfont.ttf') format('truetype'), url('../../../fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

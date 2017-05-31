@@ -1,0 +1,23 @@
+<div class="panel panel-default">
+    <div class="panel-heading font-bold">
+        {{ form.title }}
+        <!-- <div class="pull-right top-right">
+            <button type="button" class="btn btn-default" onclick="$('button[type=\'reset\']').click()">Reset</button>
+            <button type="button" class="btn btn-primary" ng-disabled="configForm.$invalid" ng-click="save()">Save changes</button>
+        </div> -->
+    </div>
+    <div class="panel-body">
+        <form class="form-horizontal form-validation" name="configForm" ng-submit="save()" method="post" ng-if="form.allLoaded" novalidate>
+            <div ng-repeat="data in form.fields">
+                <render-form-elements data="data"></render-form-elements>
+                <div class="line line-dashed b-b line-lg pull-in" ng-if="data.type != 'hidden'"></div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-4 col-sm-offset-2">
+                    <button type="reset" class="btn btn-default" ng-click="$state.reload();">Reset</button>
+                    <button type="submit" class="btn btn-primary" ng-disabled="configForm.$invalid">Save changes</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

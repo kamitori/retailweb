@@ -1,0 +1,95 @@
+<div ng-controller="MenuController">
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3">{{ title }}</h1>
+    </div>
+    <div class="wrapper-md" ng-if="menu.allLoaded">
+        <div class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    Menu Order
+                </div>
+                <div class="panel-body">
+                    <div ui-jq="nestable" ui-refresh="reorder" class="dd">
+                        <ol class="dd-list">
+                        <div nestable="menu.html" ng-model="menu.tree" ></div>
+                        </ol>
+                    </div>
+                    <div class="form-actions">
+                        <div class="row">
+                            <div class="col-md-offset-3 col-md-9 text-right">
+                                <button type="submit" class="btn btn-info" ng-click="reorder()">Re-Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="panel panel-info" >
+                <div class="panel-heading">
+                    Menu Info
+                </div>
+                <div class="panel-body">
+                    <form name="form" ng-submit="save()" method="POST" class="form-horizontal" role="form" id="menu-info">
+                        <div class="form-body">
+                            <input type="hidden" ng-model="menu.form.id" value="{{ menu.form.id }}">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" ng-model="menu.form.name" value="{{ menu.form.name }}" class="form-control" name="name" placeholder="">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Group</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" ng-model="menu.form.group_name" ng-change="changeGroup(menu.form.group_name)" >
+                                        <option value="header">Header Menu</option>
+                                        <option value="footer">Footer Menu</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Link</label>
+                                <div class="col-md-9">
+                                    <div class="input-inline">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">
+                                                        {{ baseURL }} /
+                                                        </span>
+                                            <input type="text" class="form-control" ng-model="menu.form.link" value="{{ menu.form.link}}" placeholder="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Parent Menu</label>
+                                <div class="col-md-9">
+                                    <select class="form-control" ng-model="menu.form.parent_id" ng-options="parent.text for parent in menu.parentOptions">
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">Order</label>
+                                <div class="col-md-9">
+                                    <div id="order_spinner">
+                                        <div class="input-group input-small">
+                                            <input type="number" required class="form-control" ng-model="menu.form.order_no" value="{{ menu.form.order_no }}" >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-actions">
+                            <div class="row">
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button type="submit" class="btn btn-info" ng-disabled="form.$invalid">Submit</button>
+                                    <button type="reset" class="btn default">Cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

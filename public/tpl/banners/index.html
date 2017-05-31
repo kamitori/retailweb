@@ -1,0 +1,17 @@
+<div ng-controller="BannerController">
+    <div class="bg-light lter b-b wrapper-md">
+        <h1 class="m-n font-thin h3">{{ title }}</h1>
+        <div ng-if="button">
+        	<a ng-click="save()" class="btn btn-primary pull-right backend-action-bt" ng-if="action!='list'">
+                <span>Save changes</span>
+            </a>
+        	<a href="{{ button_add.link }}" class="btn btn-success pull-right backend-action-bt">
+                <span>{{ button_add.title }}</span>
+            </a>
+            <a href="{{ button.link }}" class="btn btn-info pull-right backend-action-bt" ng-if="action!='list'">
+                <span>{{ button.title }}</span>
+            </a>
+        </div>
+    </div>
+    <ng-include src="template"></ng-include>
+</div>

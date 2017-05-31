@@ -1,0 +1,22 @@
+{
+    "name": "retail-web",
+    "description": "retail-web",
+    "version": "1.1.0",
+    "require": {
+        "php": ">=5.5",
+        "ext-phalcon": ">=1.2.4",
+        "swiftmailer/swiftmailer": "~5.2",
+        "patchwork/utf8": "^1.2"
+    },
+    "authors": [{
+        "name": "Andres Gutierrez",
+        "email": "andres@phalconphp.com"
+    }, {
+        "name": "kei",
+        "email": "hth.tung90@gmail.com"
+    }],
+    "keywords": ["phalcon", "framework", "retail-web"],
+    "type": "library",
+    "license": "BSD-3",
+    "homepage": "http://www.phalconphp.com"
+}

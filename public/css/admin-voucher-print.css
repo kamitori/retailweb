@@ -1,0 +1,16 @@
+@media all{
+	.otherdata{
+		display: none;
+	}
+}
+@media print{
+	.print-all,.modal-header-temp{
+		display:block !important;
+	}
+	.modal-header{
+		display: none;
+	}
+	.modal-header-temp{
+		display:block !important;
+	}
+}
